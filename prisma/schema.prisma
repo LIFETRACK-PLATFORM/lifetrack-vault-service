@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider     = "prisma-client"
+  output       = "../generated/prisma"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model VaultItem {
+  id                String   @id @default(uuid())
+  userId            String
+  site              String
+  username          String
+  encryptedBlob     String
+  iv                String
+  salt              String
+  encryptionVersion String
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  accessLogs VaultAccessLog[]
+
+  @@index([userId])
+}
+
+model VaultAccessLog {
+  id          String    @id @default(uuid())
+  userId      String
+  vaultItemId String
+  vaultItem   VaultItem @relation(fields: [vaultItemId], references: [id], onDelete: Cascade)
+  accessedAt  DateTime  @default(now())
+
+  @@index([userId])
+  @@index([vaultItemId])
+}
+
+model VaultMasterKeySalt {
+  userId    String   @id
+  salt      String
+  createdAt DateTime @default(now())
+}
