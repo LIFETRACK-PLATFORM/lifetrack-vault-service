@@ -29,6 +29,7 @@ export type VaultItemMinAggregateOutputType = {
   userId: string | null
   site: string | null
   username: string | null
+  category: string | null
   encryptedBlob: string | null
   iv: string | null
   salt: string | null
@@ -42,6 +43,7 @@ export type VaultItemMaxAggregateOutputType = {
   userId: string | null
   site: string | null
   username: string | null
+  category: string | null
   encryptedBlob: string | null
   iv: string | null
   salt: string | null
@@ -55,6 +57,7 @@ export type VaultItemCountAggregateOutputType = {
   userId: number
   site: number
   username: number
+  category: number
   encryptedBlob: number
   iv: number
   salt: number
@@ -70,6 +73,7 @@ export type VaultItemMinAggregateInputType = {
   userId?: true
   site?: true
   username?: true
+  category?: true
   encryptedBlob?: true
   iv?: true
   salt?: true
@@ -83,6 +87,7 @@ export type VaultItemMaxAggregateInputType = {
   userId?: true
   site?: true
   username?: true
+  category?: true
   encryptedBlob?: true
   iv?: true
   salt?: true
@@ -96,6 +101,7 @@ export type VaultItemCountAggregateInputType = {
   userId?: true
   site?: true
   username?: true
+  category?: true
   encryptedBlob?: true
   iv?: true
   salt?: true
@@ -182,6 +188,7 @@ export type VaultItemGroupByOutputType = {
   userId: string
   site: string
   username: string
+  category: string
   encryptedBlob: string
   iv: string
   salt: string
@@ -216,6 +223,7 @@ export type VaultItemWhereInput = {
   userId?: Prisma.StringFilter<"VaultItem"> | string
   site?: Prisma.StringFilter<"VaultItem"> | string
   username?: Prisma.StringFilter<"VaultItem"> | string
+  category?: Prisma.StringFilter<"VaultItem"> | string
   encryptedBlob?: Prisma.StringFilter<"VaultItem"> | string
   iv?: Prisma.StringFilter<"VaultItem"> | string
   salt?: Prisma.StringFilter<"VaultItem"> | string
@@ -230,6 +238,7 @@ export type VaultItemOrderByWithRelationInput = {
   userId?: Prisma.SortOrder
   site?: Prisma.SortOrder
   username?: Prisma.SortOrder
+  category?: Prisma.SortOrder
   encryptedBlob?: Prisma.SortOrder
   iv?: Prisma.SortOrder
   salt?: Prisma.SortOrder
@@ -247,6 +256,7 @@ export type VaultItemWhereUniqueInput = Prisma.AtLeast<{
   userId?: Prisma.StringFilter<"VaultItem"> | string
   site?: Prisma.StringFilter<"VaultItem"> | string
   username?: Prisma.StringFilter<"VaultItem"> | string
+  category?: Prisma.StringFilter<"VaultItem"> | string
   encryptedBlob?: Prisma.StringFilter<"VaultItem"> | string
   iv?: Prisma.StringFilter<"VaultItem"> | string
   salt?: Prisma.StringFilter<"VaultItem"> | string
@@ -261,6 +271,7 @@ export type VaultItemOrderByWithAggregationInput = {
   userId?: Prisma.SortOrder
   site?: Prisma.SortOrder
   username?: Prisma.SortOrder
+  category?: Prisma.SortOrder
   encryptedBlob?: Prisma.SortOrder
   iv?: Prisma.SortOrder
   salt?: Prisma.SortOrder
@@ -280,6 +291,7 @@ export type VaultItemScalarWhereWithAggregatesInput = {
   userId?: Prisma.StringWithAggregatesFilter<"VaultItem"> | string
   site?: Prisma.StringWithAggregatesFilter<"VaultItem"> | string
   username?: Prisma.StringWithAggregatesFilter<"VaultItem"> | string
+  category?: Prisma.StringWithAggregatesFilter<"VaultItem"> | string
   encryptedBlob?: Prisma.StringWithAggregatesFilter<"VaultItem"> | string
   iv?: Prisma.StringWithAggregatesFilter<"VaultItem"> | string
   salt?: Prisma.StringWithAggregatesFilter<"VaultItem"> | string
@@ -293,6 +305,7 @@ export type VaultItemCreateInput = {
   userId: string
   site: string
   username: string
+  category?: string
   encryptedBlob: string
   iv: string
   salt: string
@@ -307,6 +320,7 @@ export type VaultItemUncheckedCreateInput = {
   userId: string
   site: string
   username: string
+  category?: string
   encryptedBlob: string
   iv: string
   salt: string
@@ -321,6 +335,7 @@ export type VaultItemUpdateInput = {
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   site?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
+  category?: Prisma.StringFieldUpdateOperationsInput | string
   encryptedBlob?: Prisma.StringFieldUpdateOperationsInput | string
   iv?: Prisma.StringFieldUpdateOperationsInput | string
   salt?: Prisma.StringFieldUpdateOperationsInput | string
@@ -335,6 +350,7 @@ export type VaultItemUncheckedUpdateInput = {
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   site?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
+  category?: Prisma.StringFieldUpdateOperationsInput | string
   encryptedBlob?: Prisma.StringFieldUpdateOperationsInput | string
   iv?: Prisma.StringFieldUpdateOperationsInput | string
   salt?: Prisma.StringFieldUpdateOperationsInput | string
@@ -349,6 +365,7 @@ export type VaultItemCreateManyInput = {
   userId: string
   site: string
   username: string
+  category?: string
   encryptedBlob: string
   iv: string
   salt: string
@@ -362,6 +379,7 @@ export type VaultItemUpdateManyMutationInput = {
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   site?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
+  category?: Prisma.StringFieldUpdateOperationsInput | string
   encryptedBlob?: Prisma.StringFieldUpdateOperationsInput | string
   iv?: Prisma.StringFieldUpdateOperationsInput | string
   salt?: Prisma.StringFieldUpdateOperationsInput | string
@@ -375,6 +393,7 @@ export type VaultItemUncheckedUpdateManyInput = {
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   site?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
+  category?: Prisma.StringFieldUpdateOperationsInput | string
   encryptedBlob?: Prisma.StringFieldUpdateOperationsInput | string
   iv?: Prisma.StringFieldUpdateOperationsInput | string
   salt?: Prisma.StringFieldUpdateOperationsInput | string
@@ -388,6 +407,7 @@ export type VaultItemCountOrderByAggregateInput = {
   userId?: Prisma.SortOrder
   site?: Prisma.SortOrder
   username?: Prisma.SortOrder
+  category?: Prisma.SortOrder
   encryptedBlob?: Prisma.SortOrder
   iv?: Prisma.SortOrder
   salt?: Prisma.SortOrder
@@ -401,6 +421,7 @@ export type VaultItemMaxOrderByAggregateInput = {
   userId?: Prisma.SortOrder
   site?: Prisma.SortOrder
   username?: Prisma.SortOrder
+  category?: Prisma.SortOrder
   encryptedBlob?: Prisma.SortOrder
   iv?: Prisma.SortOrder
   salt?: Prisma.SortOrder
@@ -414,6 +435,7 @@ export type VaultItemMinOrderByAggregateInput = {
   userId?: Prisma.SortOrder
   site?: Prisma.SortOrder
   username?: Prisma.SortOrder
+  category?: Prisma.SortOrder
   encryptedBlob?: Prisma.SortOrder
   iv?: Prisma.SortOrder
   salt?: Prisma.SortOrder
@@ -454,6 +476,7 @@ export type VaultItemCreateWithoutAccessLogsInput = {
   userId: string
   site: string
   username: string
+  category?: string
   encryptedBlob: string
   iv: string
   salt: string
@@ -467,6 +490,7 @@ export type VaultItemUncheckedCreateWithoutAccessLogsInput = {
   userId: string
   site: string
   username: string
+  category?: string
   encryptedBlob: string
   iv: string
   salt: string
@@ -496,6 +520,7 @@ export type VaultItemUpdateWithoutAccessLogsInput = {
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   site?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
+  category?: Prisma.StringFieldUpdateOperationsInput | string
   encryptedBlob?: Prisma.StringFieldUpdateOperationsInput | string
   iv?: Prisma.StringFieldUpdateOperationsInput | string
   salt?: Prisma.StringFieldUpdateOperationsInput | string
@@ -509,6 +534,7 @@ export type VaultItemUncheckedUpdateWithoutAccessLogsInput = {
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   site?: Prisma.StringFieldUpdateOperationsInput | string
   username?: Prisma.StringFieldUpdateOperationsInput | string
+  category?: Prisma.StringFieldUpdateOperationsInput | string
   encryptedBlob?: Prisma.StringFieldUpdateOperationsInput | string
   iv?: Prisma.StringFieldUpdateOperationsInput | string
   salt?: Prisma.StringFieldUpdateOperationsInput | string
@@ -553,6 +579,7 @@ export type VaultItemSelect<ExtArgs extends runtime.Types.Extensions.InternalArg
   userId?: boolean
   site?: boolean
   username?: boolean
+  category?: boolean
   encryptedBlob?: boolean
   iv?: boolean
   salt?: boolean
@@ -568,6 +595,7 @@ export type VaultItemSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Ext
   userId?: boolean
   site?: boolean
   username?: boolean
+  category?: boolean
   encryptedBlob?: boolean
   iv?: boolean
   salt?: boolean
@@ -581,6 +609,7 @@ export type VaultItemSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Ext
   userId?: boolean
   site?: boolean
   username?: boolean
+  category?: boolean
   encryptedBlob?: boolean
   iv?: boolean
   salt?: boolean
@@ -594,6 +623,7 @@ export type VaultItemSelectScalar = {
   userId?: boolean
   site?: boolean
   username?: boolean
+  category?: boolean
   encryptedBlob?: boolean
   iv?: boolean
   salt?: boolean
@@ -602,7 +632,7 @@ export type VaultItemSelectScalar = {
   updatedAt?: boolean
 }
 
-export type VaultItemOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "userId" | "site" | "username" | "encryptedBlob" | "iv" | "salt" | "encryptionVersion" | "createdAt" | "updatedAt", ExtArgs["result"]["vaultItem"]>
+export type VaultItemOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "userId" | "site" | "username" | "category" | "encryptedBlob" | "iv" | "salt" | "encryptionVersion" | "createdAt" | "updatedAt", ExtArgs["result"]["vaultItem"]>
 export type VaultItemInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   accessLogs?: boolean | Prisma.VaultItem$accessLogsArgs<ExtArgs>
   _count?: boolean | Prisma.VaultItemCountOutputTypeDefaultArgs<ExtArgs>
@@ -620,6 +650,7 @@ export type $VaultItemPayload<ExtArgs extends runtime.Types.Extensions.InternalA
     userId: string
     site: string
     username: string
+    category: string
     encryptedBlob: string
     iv: string
     salt: string
@@ -1054,6 +1085,7 @@ export interface VaultItemFieldRefs {
   readonly userId: Prisma.FieldRef<"VaultItem", 'String'>
   readonly site: Prisma.FieldRef<"VaultItem", 'String'>
   readonly username: Prisma.FieldRef<"VaultItem", 'String'>
+  readonly category: Prisma.FieldRef<"VaultItem", 'String'>
   readonly encryptedBlob: Prisma.FieldRef<"VaultItem", 'String'>
   readonly iv: Prisma.FieldRef<"VaultItem", 'String'>
   readonly salt: Prisma.FieldRef<"VaultItem", 'String'>

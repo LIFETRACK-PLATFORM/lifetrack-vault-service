@@ -4,6 +4,7 @@ export type VaultItemProps = {
   userId: string;
   site: string;
   username: string;
+  category: string;
   encryptedBlob: string;
   iv: string;
   salt: string;
@@ -27,6 +28,10 @@ export class VaultItemEntity extends AggregateRoot<VaultItemProps> {
 
   get username(): string {
     return this.props.username;
+  }
+
+  get category(): string {
+    return this.props.category;
   }
 
   get encryptedBlob(): string {

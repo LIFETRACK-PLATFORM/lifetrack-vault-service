@@ -1,4 +1,4 @@
-import { IsString, MinLength } from 'class-validator';
+import { IsOptional, IsString, MinLength } from 'class-validator';
 
 export class UpdateVaultItemDto {
   @IsString()
@@ -12,6 +12,11 @@ export class UpdateVaultItemDto {
   @IsString()
   @MinLength(1)
   username: string;
+
+  @IsOptional()
+  @IsString()
+  @MinLength(1)
+  category?: string;
 
   @IsString()
   @MinLength(1)
