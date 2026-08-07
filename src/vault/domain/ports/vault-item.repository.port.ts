@@ -4,6 +4,7 @@ export type CreateVaultItemData = {
   userId: string;
   site: string;
   username: string;
+  category: string;
   encryptedBlob: string;
   iv: string;
   salt: string;
@@ -13,6 +14,7 @@ export type CreateVaultItemData = {
 export type UpdateVaultItemData = {
   site: string;
   username: string;
+  category: string;
   encryptedBlob: string;
   iv: string;
   salt: string;

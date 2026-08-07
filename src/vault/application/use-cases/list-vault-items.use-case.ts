@@ -12,6 +12,7 @@ export class ListVaultItemsUseCase {
         vaultItemId: item.id,
         site: item.site,
         username: item.username,
+        category: item.category,
         encryptionVersion: item.encryptionVersion,
         createdAt: item.createdAt.toISOString(),
         updatedAt: item.updatedAt.toISOString(),

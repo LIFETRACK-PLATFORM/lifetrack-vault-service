@@ -21,6 +21,7 @@ describe('CreateVaultItemUseCase', () => {
               userId: data.userId,
               site: data.site,
               username: data.username,
+              category: data.category ?? 'Personal',
               encryptedBlob: data.encryptedBlob,
               iv: data.iv,
               salt: data.salt,

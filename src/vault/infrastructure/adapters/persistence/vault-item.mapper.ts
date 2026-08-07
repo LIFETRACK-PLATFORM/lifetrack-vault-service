@@ -8,6 +8,7 @@ export class VaultItemMapper {
         userId: raw.userId,
         site: raw.site,
         username: raw.username,
+        category: raw.category,
         encryptedBlob: raw.encryptedBlob,
         iv: raw.iv,
         salt: raw.salt,

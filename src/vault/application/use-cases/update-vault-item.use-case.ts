@@ -29,6 +29,7 @@ export class UpdateVaultItemUseCase {
     const item = await this.vaultItemRepository.update(input.vaultItemId, {
       site: input.site,
       username: input.username,
+      category: input.category?.trim() || existing.category,
       encryptedBlob: payload.encryptedBlob,
       iv: payload.iv,
       salt: payload.salt,
@@ -40,6 +41,7 @@ export class UpdateVaultItemUseCase {
       userId: item.userId,
       site: item.site,
       username: item.username,
+      category: item.category,
       iv: item.iv,
       salt: item.salt,
       encryptionVersion: item.encryptionVersion,

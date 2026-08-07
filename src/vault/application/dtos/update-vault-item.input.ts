@@ -3,6 +3,7 @@ export type UpdateVaultItemInput = {
   vaultItemId: string;
   site: string;
   username: string;
+  category?: string;
   encryptedBlob: string;
   iv: string;
   salt: string;

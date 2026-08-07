@@ -77,6 +77,7 @@ export const VaultItemScalarFieldEnum = {
   userId: 'userId',
   site: 'site',
   username: 'username',
+  category: 'category',
   encryptedBlob: 'encryptedBlob',
   iv: 'iv',
   salt: 'salt',

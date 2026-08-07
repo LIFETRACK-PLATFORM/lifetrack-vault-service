@@ -41,6 +41,7 @@ export class GetEncryptedVaultItemUseCase {
       vaultItemId: item.id,
       site: item.site,
       username: item.username,
+      category: item.category,
       encryptedBlob: item.encryptedBlob,
       iv: item.iv,
       salt: item.salt,

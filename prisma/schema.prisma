@@ -16,6 +16,7 @@ model VaultItem {
   userId            String
   site              String
   username          String
+  category          String   @default("Personal")
   encryptedBlob     String
   iv                String
   salt              String

@@ -37,6 +37,7 @@ export class PrismaVaultItemRepository implements VaultItemRepositoryPort {
         userId: data.userId,
         site: data.site,
         username: data.username,
+        category: data.category,
         encryptedBlob: data.encryptedBlob,
         iv: data.iv,
         salt: data.salt,
@@ -52,6 +53,7 @@ export class PrismaVaultItemRepository implements VaultItemRepositoryPort {
       data: {
         site: data.site,
         username: data.username,
+        category: data.category,
         encryptedBlob: data.encryptedBlob,
         iv: data.iv,
         salt: data.salt,
