@@ -64,14 +64,15 @@ pipeline {
 
     stage("Docker Build") {
       steps {
-        sh "docker build -t vault-service:latest ."
+        sh "docker buildx build --builder lifetrack-builder -t vault-service:latest --load ."
       }
     }
   }
 
   post {
     always {
-      sh 'docker image prune -f'
+      sh 'docker image prune -af'
+      sh 'docker buildx prune -af --builder lifetrack-builder'
     }
     success {
       echo "Pipeline OK - vault-service #${env.BUILD_NUMBER}"
