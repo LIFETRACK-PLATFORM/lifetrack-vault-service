@@ -60,14 +60,18 @@ pipeline {
 
     stage("Docker Build") {
       steps {
-        sh "docker build -t vault-service:latest ."
+        lock('docker-build') {
+          sh "docker build -t vault-service:latest ."
+        }
       }
     }
   }
 
   post {
     always {
-      sh 'docker image prune -f'
+      lock('docker-build') {
+        sh 'docker image prune -f'
+      }
     }
     success {
       echo "Pipeline OK - vault-service #${env.BUILD_NUMBER}"
